@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>nlog.extensions.azureappservice</AssemblyName>
+    <RootNamespace>Nlog.Extensions.AzureAppService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.2" />
+  </ItemGroup>
+
+</Project>
