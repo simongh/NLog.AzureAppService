@@ -4,7 +4,20 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>nlog.extensions.azureappservice</AssemblyName>
     <RootNamespace>Nlog.Extensions.AzureAppService</RootNamespace>
-  </PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <Version>1.0.0</Version>
+    
+    <Authors>Simon Halsey</Authors>
+    <Description>NLog target for Azure App Service blob storage</Description>
+    <CurrentYear>$([System.DateTime]::Now.ToString(yyyy))</CurrentYear>
+    <Copyright>Copyright (c) $(CurrentYear) - Simon Halsey</Copyright>
+
+    <PackageTags>NLog;azure;CloudBlob;blob;storage;log;logging</PackageTags>
+    <PackageProjectUrl>https://github.com/simongh/NLog.AzureAppService</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/simongh/NLog.AzureAppService.git</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="NLog" Version="4.7.2" />
