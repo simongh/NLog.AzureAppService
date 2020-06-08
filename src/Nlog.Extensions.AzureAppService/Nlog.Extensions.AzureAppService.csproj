@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>nlog.extensions.azureappservice</AssemblyName>
-    <RootNamespace>Nlog.Extensions.AzureAppService</RootNamespace>
+    <RootNamespace>NLog.Extensions.AzureAppService</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <Version>1.0.0</Version>
@@ -13,7 +13,7 @@
     <CurrentYear>$([System.DateTime]::Now.ToString(yyyy))</CurrentYear>
     <Copyright>Copyright (c) $(CurrentYear) - Simon Halsey</Copyright>
 
-    <PackageTags>NLog;azure;CloudBlob;blob;storage;log;logging</PackageTags>
+    <PackageTags>NLog;azure;blob;storage;log;logging</PackageTags>
     <PackageProjectUrl>https://github.com/simongh/NLog.AzureAppService</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/simongh/NLog.AzureAppService.git</RepositoryUrl>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nlog.Extensions.AzureAppService
+namespace NLog.Extensions.AzureAppService
 {
 	internal class AppContext : IAppContext
 	{

@@ -1,4 +1,4 @@
-﻿namespace Nlog.Extensions.AzureAppService
+﻿namespace NLog.Extensions.AzureAppService
 {
 	internal interface IAppContext
 	{

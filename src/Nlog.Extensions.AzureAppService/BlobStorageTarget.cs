@@ -1,5 +1,4 @@
-﻿using NLog;
-using NLog.Targets;
+﻿using NLog.Targets;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +8,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Nlog.Extensions.AzureAppService
+namespace NLog.Extensions.AzureAppService
 {
 	[Target("AzureBlobStorage")]
 	public sealed class BlobStorageTarget : AsyncTaskTarget
