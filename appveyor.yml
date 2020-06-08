@@ -13,3 +13,7 @@ dotnet_csproj:
 
 before_build:
 - ps: nuget restore .\src\
+
+build:
+  project: .\src\Nlog.Extensions.AzureAppService.sln
+  verbosity: minimal
