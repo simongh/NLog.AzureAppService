@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NLog.Extensions.AzureAppService
 {
-	[Target("AzureBlobStorage")]
+	[Target("AzureAppServicesBlob")]
 	public sealed class BlobStorageTarget : AsyncTaskTarget
 	{
 		private readonly HttpClient _client;
@@ -18,7 +18,7 @@ namespace NLog.Extensions.AzureAppService
 		private Uri _appendUri;
 		private Uri _fullUri;
 
-		private string ContaineruUrl => Environment.GetEnvironmentVariable("APPSETTING_DIAGNOSTICS_AZUREBLOBCONTAINERSASURL");
+		private string ContainerUrl => AppContext.Current.ContainerUrl;
 
 		private string ApplicationInstanceId => AppContext.Current.SiteInstanceId;
 
@@ -42,6 +42,7 @@ namespace NLog.Extensions.AzureAppService
 			: base()
 		{
 			_client = new HttpClient();
+			BatchSize = 1000;
 			QueueLimit = 1000;
 			TaskDelayMilliseconds = (int)TimeSpan.FromSeconds(1).TotalMilliseconds;
 		}
@@ -62,7 +63,7 @@ namespace NLog.Extensions.AzureAppService
 				var key = group.Key;
 				var blobName = $"{AppName}/{key.Year}/{key.Month:00}/{key.Day:00}/{key.Hour:00}/{FileName}";
 
-				var builder = new UriBuilder(ContaineruUrl);
+				var builder = new UriBuilder(ContainerUrl);
 				builder.Path += "/" + blobName;
 
 				_fullUri = builder.Uri;

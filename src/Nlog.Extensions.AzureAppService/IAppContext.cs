@@ -6,5 +6,7 @@
 		bool IsRunningInAzure { get; }
 		string SiteInstanceId { get; }
 		string SiteName { get; }
+
+		string ContainerUrl { get; }
 	}
 }
